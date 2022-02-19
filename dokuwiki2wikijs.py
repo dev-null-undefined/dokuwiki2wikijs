@@ -187,7 +187,6 @@ def read_users(path):
         for line in f:
             if not line.startswith("#") and len(line) > 1:
                 userparts = line.split(':')
-                assert(len(userparts) == 5)
                 users[userparts[0]] = {
                     'name': userparts[2], 'email': userparts[3]}
 
